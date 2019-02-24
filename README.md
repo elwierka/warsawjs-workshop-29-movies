@@ -2195,14 +2195,13 @@ import { HttpClientModule }    from '@angular/common/http';
     ...
 ```
 
-Angularowy moduł HttpClient zwraca Observable z wołanych metod HTTP, np. http.get('/api') zwraca Observable. Observable nie zmieniaja odpowiedzi z serwera (jak to jest możliwe w przypadku Promise i chainowaniu za pomoca metody .then()). Zamiast tego na Observable można użyć operatorów, które zmienia wartości response w miarę potrzeby.
+Angularowy moduł HttpClient zwraca Observable z wołanych metod HTTP, np. http.get('/api') . Observable nie zmieniaja odpowiedzi z serwera (jak to jest możliwe w przypadku Promise i chainowaniu za pomoca metody .then()). Zamiast tego na Observable można użyć operatorów, które zmieniają wartości response w miarę potrzeby.
 
 Http requesty można anulować poprzez odsubskrybowanie (Observable emituje wartości po zasubskrybowaniu do niego. Observable można odsubskrybować, tzn. przestać nasłuchiwać - zaś Promise nie). Żądania można skonfigurować, aby uzyskać aktualizacje zdarzeń postępu.
 Nieudane żądania można łatwo ponowić.
 
 
-Obserwable pomagaja zarzadzać asynchronicznymi danymi przychodzacymi w czasie, tj. dane przychodzace z backendu. Observable traktuje takie dane jako kolekcję.
-Można myśleć o Observableach jako o kolekcji, która przychodzi asynchronicznie w czasie.
+Obserwable to strumienie danych, które emitują wartości w czasie. tj. dane przychodzace z backendu. 
 
 Angular używa Observable jako interfejs do obsługi różnych, wspólnych asynchronicznych operacji.
 - klasa EventEmitter rozszerza Observable
@@ -2210,9 +2209,6 @@ Angular używa Observable jako interfejs do obsługi różnych, wspólnych async
 - Router i Form Moduły używaja Observable do nasłuchiwania i odpowiadania na eventy wprowadzone przez użytkownika
 Router.events dostarcza eventy jako Observable.
 
-Observable pozwalaja manipulować zestawem eventów z operatorami.
-Operatory to metody na Observableach, które tworza nowe Observable.
-Każdy operator przekształca źródło Observable na swój sposób.
 Operatory nie czekaja na wszystkie wartości i przetwarzaja je osobno w czasie, kiedy sa emitowane. Operatory: map, filter, take, merge ... 
 
 Angular umożliwia subskrybowanie do Observable na dwa sposoby:
