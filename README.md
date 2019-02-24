@@ -2146,7 +2146,7 @@ ng g m layout
 
 Serwis to zwykła klasa uderokowana dekoratorem @Injectable(). 
 
-Serwisy to świetny sposób na dzielenie się informacjami między klasami, które się nie znają. Komponenty nie powinny pobierać ani zapisywać danych bezpośrednio i na pewno nie powinny przedstawiać zahardkodowanych danych. Powinny koncentrować się na prezentacji danych i delegowaniu dostępu do danych do usługi. Serwis można wstrzyknąć w różnych komponentach jako dependencję.
+Serwisy to świetny sposób na dzielenie się informacjami pomiędzy klasami, które się nie znają. Komponenty nie powinny pobierać ani zapisywać danych bezpośrednio i na pewno nie powinny przedstawiać zahardkodowanych danych. Powinny koncentrować się na prezentacji danych i delegowaniu dostępu do danych do usługi. Serwis można wstrzyknąć w różnych komponentach jako dependencję.
 
 ```JavaScript
 
